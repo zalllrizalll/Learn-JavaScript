@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    <script>
+        const person = {
+            "nama lengkap": "Muhammad Rizal Pratama",
+            age: 21,
+            address: "Semarang"
+        }; // Object
+        // Ubah Property atau Attributes di dalam sebuah Object
+
+        // person["name"] = "Muhammad Rizal Pratama";
+        // person["age"] = 21;
+        // person["address"] = "Semarang";
+
+        // Mengakses suatu properties atau attributes di dalam sebuah object
+        console.info(`Nama : ${person["nama lengkap"]}`);
+        console.info(`Umur : ${person.age}`);
+        console.info(`Alamat : ${person.address}`);
+
+        console.table(person);
+
+        // Menghapus Property atau Attribute tertentu pada sebuah object
+        delete person["age"];
+
+        console.table(person);
+
+        // person["age"] = 25;
+
+        // console.table(person);
+    </script>
+</body>
+</html>

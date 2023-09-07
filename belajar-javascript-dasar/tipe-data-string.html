@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data String</title>
+</head>
+<body>
+    <script>
+        /*
+        Pastikan ketika menggunakan format tipe data string
+        harus konsisten menggunakan salah satunya agar tidak membingungkan saat proses development
+        */
+        // Penulisan format tipe data string menggunakan petik dua ("")
+        document.writeln("Muhammad Rizal Pratama");
+        document.writeln("<br>");
+        // Penulisan format tipe data string menggunakan petik satu ('')
+        document.writeln('Hello, Rizal Pratama');
+        document.writeln("<br>");
+        /*
+        Untuk menggabungkan 2 atau lebih tipe data string dapat
+        menggunakan operator (+) sebagai penghubung tiap string tersebut
+        */
+        document.writeln("Nama Lengkap : " + "Muhammad " + "Rizal " + "Pratama");
+        document.writeln("<br>");
+        document.writeln("Jenis Kelamin : " + "Laki-Laki");
+        document.writeln("<br>");
+       
+       /*
+       Escape Sequence -> Karakter khusus untuk membuat format ENTER, TAB di dalam sebuah string
+       */
+        document.writeln("<textarea cols=100 rows=10>");
+        // Format ENTER -> \n
+        document.writeln("Muhammad \nRizal \nPratama");
+        // Format TAB -> \t
+        document.writeln("Jenis Kelamin\t : " + "Laki-Laki");
+        // Format backslash -> \\
+        document.writeln("\\Beranda\\Article\\Contact Us");
+        // Format pemberian petik 1 -> \'
+        document.writeln('\'Belajar JavaScript Dasar\'');
+        // Format pemberian petik 2 -> \"
+        document.writeln("\"Programmer Zaman Now\"");
+        document.writeln("</textarea>");
+    </script>
+</body>
+</html>

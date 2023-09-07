@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Optional Chaining</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Muhammad",
+            middleName: "Rizal",
+            lastName: "Pratama",
+            age: 21,
+            sex: "Laki-Laki",
+            address: {
+                street: "Jalan Tarupolo",
+                neighborhoods: "Gisikdrono",
+                district: "Semarang Barat",
+                city: "Semarang"
+            }
+        };
+        // person?.address -> validasi apakah di dalam sebuah object person terdapat properti address 
+        let result = person?.address?.country; // undefined
+        document.writeln(`<p>${result}</p>`);
+        result = person?.address?.district; // Semarang Barat
+        document.writeln(`<p>${result}</p>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Nullish Coalescing</title>
+</head>
+<body>
+    <script>
+        let parameter = null; // undefined
+        // if(data === undefined || data === null){
+        //     data = "Nilai Default";
+        // }
+
+        /*
+        Operator Nullish Coalescing -> operator yang berfungsi untuk melakukan pengecekan seperti sama halnya dengan Operator Ternary
+        Akan tetapi dalam operator tersebut hanya berfungsi melakukan pengecekan apakah value dari sebuah variabel tersebut
+        bernilai undefined atau NULL
+        */
+        const data = parameter ?? "Nilai Default";
+        alert(data);
+    </script>
+</body>
+</html>

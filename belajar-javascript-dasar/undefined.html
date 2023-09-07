@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined</title>
+</head>
+<body>
+    <script>
+        // Variable Undefined
+        let name;
+        if(name === undefined){
+            console.info("UNDEFINED");
+        } else {
+            console.info("DEFINED");
+        }
+
+        // Array Undefined
+        const names = ["Eko", "Budi"];
+        if(names[2] === undefined){
+            console.info("Data tidak ditemukan!");
+        } else {
+            console.info(`Hello ${names[2]}`);
+        }
+
+        // Object Undefined
+        const person = {};
+        if(person.name === undefined){
+            console.info("Attribut object tidak ditemukan!");
+        } else {
+            console.info(`Hello ${person.name}`);
+        }
+    </script>
+</body>
+</html>

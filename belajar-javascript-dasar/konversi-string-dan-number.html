@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi String dan Number</title>
+</head>
+<body>
+    <script>
+        let value1 = parseInt("1");
+        let value2 = 1;
+        const result = `Total : ${value1 + value2}`;
+        console.info(result);
+
+        // Konversi String to Number
+        /*
+        parseInt -> String to Integer (Bilangan Bulat)
+        parseFloat -> String to Float (Bilangan Desimal)
+        Number -> String to Integer/Float (FLexible)
+        */
+        document.writeln(`<p>${parseInt("1.1")}</p>`);      
+        document.writeln(`<p>${parseFloat("1.1")}</p>`);
+        document.writeln(`<p>${Number("1.1")}</p>`);
+
+        // Konversi Number to String
+        let nilaiA = 1;
+        let nilaiB = 1;
+        const sum = nilaiA.toString() + nilaiB.toString();
+        document.writeln(sum);
+
+        // NaN (Not a Number)
+        /*
+        Jika kesalahan dapat ditolerir gunakan :
+        parseInt atau parseFLoat
+        Apabila kesalahan tidak dapat ditolerir sedikitpun, maka gunakan :
+        Number
+        */
+
+        document.writeln(`<p>${parseInt("salah")}</p>`); // NaN
+        document.writeln(`<p>${parseFloat("1.1text")}</p>`); // 1.1
+
+        document.writeln(`<p>${Number("1.1ups")}</p>`); // NaN
+        document.writeln(`<p>${Number("1x")}</p>`); // NaN
+        document.writeln(`<p>${Number("Bukan Number")}</p>`); // NaN
+
+        // Operasi pada NaN
+        let first = Number("salah"); // NaN
+        let second = 100;
+        const hasil = first + second; // Nan
+
+        document.writeln(`<p>Hasil : ${hasil}</p>`);
+
+        /*
+        Function isNaN() -> melakukan pengecekan apakah suatu string tersebut sebuah number atau bukan
+        return dari function tersebut adalah boolean -> true atau false
+        true -> jika suatu string tersebut bukan number
+        false -> jika suatu string tersebut merupakan number
+        */
+        document.writeln(`<p>${isNaN(first)}</p>`);
+
+    </script>
+</body>
+</html>

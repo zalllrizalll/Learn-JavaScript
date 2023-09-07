@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic HTML 5</title>
+
+    <style>
+        header{
+            background-color: gray;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+        }
+        article{
+            padding: 20px;
+            width: 100%;
+            background-color: #f1f1f1;
+        }
+        footer{
+            background-color: grey;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+        nav{
+            background-color: yellow;
+            padding: 10px;
+        }
+        nav ul{
+            list-style-type: none;
+            overflow: hidden;   
+        }
+        nav li{
+            float: left;
+        }
+        nav li a{
+            display: block;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        nav li a:hover{
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- Bagian Header -->
+    <header>
+        <h1>Judul Halaman</h1>
+    </header>
+    <!-- Bagian Navigasi Link -->
+    <nav>
+        <ul>
+            <li><a href="">Beranda</a></li>
+            <li><a href="">Article</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Bagian isi Content -->
+    <section>
+        <article>
+            <h1>Belajar HTML</h1>
+            <p>Isi belajar HTML</p>
+        </article>
+        <article>
+            <h1>Belajar CSS</h1>
+            <p>Isi Belajar CSS</p>
+        </article>
+    </section>
+    <!-- Bagian Footer -->
+    <footer>
+        <p>Powered by Muhammad Rizal Pratama <time datetime="2023">2023</time></p>
+    </footer>
+</body>
+</html>

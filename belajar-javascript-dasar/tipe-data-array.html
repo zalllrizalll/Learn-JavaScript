@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Array</title>
+</head>
+<body>
+    <script>
+        // let arrayKosong = [];
+        // let arrayNama = ["Muhammad", "Rizal", "Pratama", 1, true];
+        // console.info(arrayNama);
+        const names = [];
+        // Create Data Array
+        // Function push -> menambah data di dalam suatu array
+        names.push("Muhammad");
+        names.push("Rizal", "Pratama");
+        names.push("Budi", "Eko", "Fahri");
+
+        console.table(names);
+        // Read Data
+        // variableArray[index] -> membaca suatu data di dalam sebuah array
+        console.info(names[3]);
+        console.info(names[4]);
+        console.info(names[5]);
+
+        // Update Array
+        // variableArray[indeks] = valueBaru
+        names[2] = "Farah";
+        names[3] = "Jupri";
+        names[4] = "Setiawan";
+
+        // Delete Array
+        /*
+        Ketika kita melakukan delete array pada posisi indeks tertentu,
+        sebenarnya data indeks array tersebut tidak dihilangkan secara permanen.
+        Akan tetapi data array tersebut hanya dikosongkan saja.
+        Apabila sewaktu-waktu kita ingin menggunakan array yang kita delete tersebut,
+        tinggal kita isi value nya kembali menggunakan fungsi update data sebagai berikut :
+        variableArray[indeks] = valueBaru
+        */
+        delete names[3];
+        console.table(names);
+
+        names[3] = "Rusdi";
+        console.table(names);
+
+        /*
+        Multidimensional Array -> Array 2 dimensi atau lebih
+        Maksudnya yaitu kita dapat memasukkan sebuah array ke dalam array
+        Contoh :
+        Misalkan kita memiliki 6 buah data array, kemudian kita ingin menambah data array yang ke 7
+        dalam bentuk sebuah array
+        */
+        names.push(["Eko", "Kurniawan", "Khannedy"]);
+        console.table(names);
+    </script>
+</body>
+</html>

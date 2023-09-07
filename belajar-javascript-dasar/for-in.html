@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In</title>
+</head>
+<body>
+    <script>
+        const person = {
+            firstName: "Muhammad",
+            middleName: "Rizal",
+            lastName: "Pratama"
+        }
+        // for in loop will iterate through the properties of an object and print out their values
+        for(const property in person){
+            document.writeln(`<p>Property ${property}: ${person[property]}</p>`);
+        }
+        // For In untuk sebuah array
+        const names = ["Eko", "Budi", "Farah"];
+        for(const index in names){
+            document.writeln(`<p>Index ke - ${index} : ${names[index]}</p>`);
+        };
+    </script>
+</body>
+</html>

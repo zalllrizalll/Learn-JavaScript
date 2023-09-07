@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Template</title>
+</head>
+<body>
+    <script>
+        const name = "Muhammad Rizal Pratama";
+        const firstName = "Muhammad";
+        const middleName = "Rizal";
+        const lastName = "Pratama";
+        const template = `Name : ${firstName} ${middleName} ${lastName}`;
+
+        console.info(template);
+
+        const nilai = 75;
+        const template2 = `Name : ${name}, Lulus : ${nilai > 75}`;
+        console.info(template2);
+
+        // String template juga dapat digunakan untuk menuliskan baris code untuk beberapa line sekaligus
+        const multiLine = `Nama saya Muhammad Rizal Pratama,
+Saya merupakan mahasiswa Teknik Informatika,
+Saya studi di Universitas Dian Nuswantoro,
+Saya sedang belajar JavaScript,
+Jika saya cape biasanya tidur.`;
+
+        document.writeln("<pre>");
+        document.writeln(multiLine);
+        document.writeln("</pre>");
+    </script>
+</body>
+</html>

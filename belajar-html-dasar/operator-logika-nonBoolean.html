@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Logika Non Boolean - OR</title>
+</head>
+<body>
+    <script>
+        /*
+        OR - Kondisi mencari sebuah truthy
+        mulai dari sisi kiri ke kanan
+        */
+        console.info("hello" || ''); // hello
+        console.info("" || []); // []
+        console.info("0" || "NOL"); // 0
+        console.info(0 || "NOL"); // NOL
+        console.info(null || "NULL"); // NULL
+        console.info(undefined || "UNDEFINED"); // UNDEFINED
+        /*
+        Apabila 2 kondisi bernilai falsy, maka
+        falsy yg terakhir yg akan diambil
+        */
+        console.info(0 || null); // null
+
+        // Implementasi studi kasus
+        const person = {
+            firstName: "",
+            lastName: "Pratama"
+        };
+        const name = person.firstName || person.lastName;
+        console.info(name);
+
+        /*
+        AND - Kondisi mencari sebuah falsy
+        mulai dari sisi kiri ke kanan
+        */
+       console.info("hello" && ''); // ''
+       console.info("" && []); // ""
+       console.info("0" && "NOL"); // NOL
+       console.info(0 && "NOL"); // 0
+       console.info(null && "NULL"); // null
+       console.info(undefined && "UNDEFINED"); // undefined
+       console.info("undefined" && "null"); // null
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FieldSet Register Account</title>
+</head>
+<body>
+    <form action="">
+        <fieldset id="identitas">
+            <legend>Identitas</legend>
+            <label for="nama">Nama :</label> <input type="text" name="nama" id="nama"> <br>
+            <label for="email">Email :</label> <input type="email" name="email" id="email"> <br>
+            <label for="telepon">Telepon :</label> <input type="tel" name="telepon" id="telepon" pattern="(62)[0-9]{10,15}">
+        </fieldset>
+        <fieldset id="alamat">
+            <legend>Alamat</legend>
+            <label for="kecamatan">Kecamatan :</label> <input type="text" name="kecamatan" id="kecamatan"> <br>
+            <label for="provinsi">Provinsi :</label> <input type="text" name="provinsi" id="provinsi"> <br>
+            <label for="kota">Kota :</label> <input type="text" name="kota" id="kota">
+        </fieldset>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
