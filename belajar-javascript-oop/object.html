@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <script>
+        /*
+        Ada 2 cara dalam pembuatan sebuah object :
+        1. Membuat secara prosedural
+           Contoh :
+           const person = {
+                firstName: "Muhammad",
+                middleName: "Rizal",
+                lastName: "Pratama"
+           };
+        2. Membuat secara OOP -> melalui sebuah class
+           Contoh : Membuat Contructor Function
+           function Person() { -> Constructor Function ditandai dengan penamaan huruf awal berupa huruf Kapital
+                // Properti
+                // Method
+           }
+        */
+        // Ini merupakan Constructor Function
+        function Person(firstName, lastName) {
+            // Cara pembuatan properti di dalam suatu Constructor Function
+            this.firstName = firstName;
+            this.lastName = lastName;
+            // Cara pembuatan method di dalam suatu Constructor Function
+            this.sayHello = function (name){
+                console.info(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        // Ini Merupakan pembuatan sebuah object berdasarkan Contructor Function
+        const Budi = new Person("Budi", "Nugraha");
+        Budi.sayHello("Rizal");
+        const Joko = new Person("Joko", "Susilo");
+        Joko.sayHello("Rizal");
+
+        console.info(Budi);
+        console.info(Joko);
+    </script>
+</body>
+</html>

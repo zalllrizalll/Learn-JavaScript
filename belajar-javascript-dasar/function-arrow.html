@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Arrow</title>
+</head>
+<body>
+    <script>
+        // Cara membuat arrow function
+        // const sayHello = (name) => {
+        //     const say = `Hello ${name}`;
+        //     console.info(say);
+        // }
+
+        // sayHello("Rizal Pratama");
+
+        /*
+        Apabila sebuah arrow function sifatnya sederhana
+        hanya memuat satu baris line saja, alangkah baiknya
+        kita mendeklarasikan tanpa block function nya {}
+        */
+    //    const sayHello = (name) => console.info(`Hello ${name}`);
+
+       /*
+       Dalam arrow function juga mendukung penyederhanaan syntax pada parameter.
+       Apabila di dalam sebuah arrow function tersebut hanya memuat 1 parameter saja
+       alangkah sebaiknya kita mendeklarasikan sebuah arrow function tersebut tanpa
+       menggunakan ()
+       */
+       const sayHello = name => console.info(`Hello ${name}`);
+       sayHello("Rizal Pratama");
+
+    //    const sum = (first,second) => {
+    //     return first + second;
+    //    }
+
+    /*
+    Arrow function juga dapat mengembalikan suatu nilai yaitu dengan kata kunci return
+    sama halnya dengan function seperti biasa, akan tetapi yang membedakan hal tersebut yaitu
+    arrow function mendukung pengembalian suatu nilai tanpa kata kunci return. Dengan syarat :
+    Apabila suatu statement yang ingin kita eksekusi merupakan suatu hal yang sangat sederhana
+    sehingga dalam penulisan statement tersebut cukup dengan 1 baris line code saja tanpa diberi tanda
+    block function {}
+    */
+
+    const sum = (first, second) => first + second;
+    console.info(sum(100, 100));
+
+    /*
+    Sebuah arrow function hampir mirip dengan anonymous function, kita dapat mendeklarasikan
+    suatu arrow function secara langsung di dalam parameter milik function lain
+    */
+
+    function giveMeName(callback){
+        callback("Budi Handoko");
+    }
+    // Anonymous Function Version
+    // giveMeName( function (name) {
+    //     console.info(`Hello ${name}`);
+    // });
+
+    // Arrow Function Version
+    giveMeName((name) => console.info(`Hello ${name}`));
+    </script>
+</body>
+</html>

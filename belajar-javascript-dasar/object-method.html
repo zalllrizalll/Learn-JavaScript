@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Method</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: "Rizal Pratama",
+            // Arrow Function Version
+            // sayHello: name => alert(`Hello ${name}`)
+
+            // Anonymous Function Version
+            sayHello: function (name){
+                alert(`Hello ${name}`)
+            }
+        }
+
+        // Akses properti object method
+        person.sayHello(person.name);
+
+        // Menambahkan Method ke dalam suatu Object yang telah dibuat
+        const mahasiswa = {
+            name: "Budi Handoko"
+        }
+
+        mahasiswa.sayHi = function (name){
+            alert(`Hello ${name}`);
+        }
+
+        mahasiswa.sayHi(mahasiswa.name);
+    </script>
+</body>
+</html>

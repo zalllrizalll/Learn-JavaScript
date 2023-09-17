@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        /*
+            Global Scope -> Bisa diakses dimanapun seperti diakses untuk beberapa function
+            Local scope -> Hanya bisa di akses oleh fungsi yang berada dalam local scope tersebut
+        */
+       let counter = 0;
+
+       function hitMe(){
+        //  Local Scope untuk function hitMe()
+        counter++;
+       }
+
+       function other(){
+        // Local Scope untuk function other()
+
+       }
+
+       hitMe();
+       hitMe();
+
+       console.info(counter);
+
+       /*
+            Ketika kita membuat sebuah variable di dalam function tertentu, maka variable tersebut hanya
+            bisa diakses di dalam block kode dari function itu sendiri
+       */
+
+       function first(){
+        //  Local Scope untuk function first()
+        let firstVariable = "First";
+
+        function firstNested(){
+            console.info(firstVariable); // can access local scope first function
+            const firstNestedVariable = "First Nested";
+        }
+        // Sebuah nested function hanya bisa diakses di dalam local scope dari function parent
+        firstNested();
+        // console.info(firstNestedVariable); // cannot access local scope
+       }
+
+       function second(){
+        // Local Scope untuk function second()
+        let secondVariable = "Second";
+       }
+
+       // Global Scope
+       first();
+    //    console.info(firstVariable); // cannot access local scope
+    //    console.info(secondVariable); // cannot access local scope
+    </script>
+</body>
+</html>

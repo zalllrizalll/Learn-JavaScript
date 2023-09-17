@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict Mode</title>
+</head>
+<body>
+    <script>
+        function useStrictMode(){
+            // Ini mengaktifkan mode Strict
+            'use strict';
+            const person = {
+                firstName: "Muhammad",
+                middleName: "Rizal",
+                lastName: "Pratama"
+            };
+            // Error -> With statement tidak diperbolehkan digunakan dalam strict mode
+            // with(person){
+            //     console.info(firstName);
+            //     console.info(middleName);
+            //     console.info(lastName);
+            // };
+        }
+
+        useStrictMode();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masalah Variable Var</title>
+</head>
+<body>
+    <script>
+        /*
+            Masalah utama yang terjadi ketika kita mendeklarasikan sebuah variable menggunakan
+            kata kunci var yaitu :
+            1. Fungsi Scope -> memiliki cakupan (scope) yang lebih besar daripada yang diharapkan
+            2. Hoisting -> Anda dapat mengakses variabel sebelum mereka dideklarasikan dalam kode, yang seringkali dapat menyebabkan perilaku yang tidak terduga.
+            3. Tidak aman dalam Multithreading (seperti browser dengan banyak tab)
+            4. Tidak mendukung blok scope -> Sebelum ECMAScript 6 (ES6), JavaScript tidak mendukung blok scope. Variabel yang dideklarasikan dengan var hanya memiliki cakupan fungsi. Ini membuat sulit untuk mengisolasi variabel di dalam blok tertentu.
+            5. Mengganggu pengoptimalan kode ->  Penggunaan var dapat menghambat pengoptimalan kode JavaScript oleh mesin JavaScript, seperti V8 di Chrome. Ini dapat mempengaruhi kinerja aplikasi.
+        */
+       var i = 20;
+
+       for(var i = 0; i < 10; i++){
+            console.info(i);
+       }
+
+       console.info(i);
+    </script>
+</body>
+</html>

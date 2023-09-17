@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        // Ini merupakan Constructor Function
+        function Person(firstName, lastName) {
+            // Cara pembuatan properti di dalam suatu Constructor Function
+            this.firstName = firstName;
+            this.lastName = lastName;
+            // Cara pembuatan method di dalam suatu Constructor Function
+            this.sayHello = function (name){
+                console.info(`Hello ${name}, my name is ${this.firstName}`);
+            }
+        }
+
+        // Menambahkan suatu properti ataupun method di dalam suatu proto
+        Person.prototype.sayBye = function (){
+            console.info("Good Bye");
+        }
+
+        Person.prototype.run = function (){
+            console.info(`${this.firstName} is running`);
+        }
+
+        // Ini Merupakan pembuatan sebuah object berdasarkan Contructor Function
+        const Budi = new Person("Budi", "Nugraha");
+        const Joko = new Person("Joko", "Susilo");
+
+        console.info(Budi);
+        console.info(Joko);
+
+        Budi.sayBye();
+        Budi.run();
+    </script>
+</body>
+</html>

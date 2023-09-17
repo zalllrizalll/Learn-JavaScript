@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Rest Parameter</title>
+</head>
+<body>
+    <script>
+        function sum(name, ...data){
+            let total = 0;
+            for (const nilai of data) {
+                total += nilai
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`);
+        }
+
+        sum("Books", 14, 23, 56, 74, 85, 47);
+        sum("Shopping Items", 26, 38, 41, 57, 62, 73);
+        sum("Shoes", 48, 93, 46, 84, 32, 94);
+
+        /*
+        Misalkan kita memiliki sebuah array yg sudah di tampung dalam sebuah variable
+        dan kita ingin mengkonversi nilai-nilai yang ada di dalam array tersebut agar bisa diolah ke dalam rest parameter
+        maka kita dapat menggunakan SPREAD SYNTAX
+        */
+
+        const values = [64, 32, 49, 74, 95, 52];
+        sum("Test", ...values);
+
+        /*
+        Sebelum adanya REST PARAMETER -> javascript memiliki fitur arguments
+        dimana fitur arguments ini sama seperti halnya ketika kita input value array di dalam sebuah parameter function
+        akan tetapi kita tidak perlu deklarasikan parameter saat membuat function nya
+        cukup sebutkan kata kunci arguments di dalam block kode function tersebut
+        */
+       function oldSum(){
+        let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+            }
+            document.writeln(`<p>Total is ${total}</p>`);
+       }
+       oldSum(1,2,3,4,5);
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Optional Parameter</title>
+</head>
+<body>
+    <script>
+        function sayHello(firstName, middleName, lastName){
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        sayHello();
+        sayHello("Muhammad");
+        sayHello("Muhammad", "Rizal");
+        sayHello("Muhammad", "Rizal", "Pratama");
+        sayHello("Muhammad", "Rizal", "Pratama", "Farah"); // Disini kita input 4 parameter, sedangkan dalam function tersebut hanya menyediakan 3 parameter saja
+        // kode tersebut tidak menghasilkan error apapun, Hal ini menyebabkan ketika melakukan proses debugging akan kesusahan identifikasi error di dalamnya
+        // Karena javascript memiliki sebuah keunikan dalam deklarasi function parameter
+        /*
+        Function optional parameter di dalam javascript -> merupakan sebuah function
+        yang cukup unik dalam deklarasi value parameter di dalamnya, ketika kita membuat sebuah function beserta parameter di dalam function tersebut
+        kita tidak memasukkan nilai di dalam parameternya. secara otomatis javascript akan memberikan nilai undefined pada parameter tersebut
+        dan tidak akan menyebabkan error pada kode yang kita buat
+        */
+        
+    </script>
+</body>
+</html>

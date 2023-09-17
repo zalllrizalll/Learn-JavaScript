@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function sebagai Value</title>
+</head>
+<body>
+    <script>
+        function sayHello(name){
+            document.writeln(`<p>Hello my name is ${name}</p>`);
+        }
+
+        const say = sayHello;
+        /*
+        Ini merupakan sebuah function yang ditampung di dalam sebuah variabel
+        Ketika kita ingin memanggil function tersebut terdapat 2 cara :
+        1. sayHello("Rizal");
+        kita dapat menggunakan nama variable yang telah menampung dari function tersebut, kemudian untuk dijadikan pemanggilan function tersebut
+        2. say("Rizal") -> variable yang menampung dari function tersebut dapat digunakan untuk memanggil block code suatu function
+        */
+        say("Rizal Pratama");
+
+        // Kita juga dapat mengirim sebuah function di dalam parameter function lainnya
+        function giveMeName(callback){
+            callback("Chana Amelinda");
+        }
+        
+        giveMeName(sayHello); // sayHello("Chana Amelinda")
+        giveMeName(say); // sayHello("Chana Amelinda")
+    </script>
+</body>
+</html>

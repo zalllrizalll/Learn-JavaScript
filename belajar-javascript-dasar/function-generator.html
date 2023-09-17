@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Generator</title>
+</head>
+<body>
+    <script>
+        /*
+        Data Generator -> suatu jenis data yang hampir mirip seperti array namun secara konteks berbeda
+        Data generator dapat menampung lebih dari 1 data di dalam sebuah function
+        Untuk mengembalikan tiap-tiap nilai yang ditampung dapat menggunakan syntax -> yield
+        Data Generator hanya bisa dilakukan iterasi untuk mendapatkan seluruh data yg ada di dalamnya
+        Data Generator tidak dapat diakses melalui indeks ketika kita ingin mendapatkan suatu data tertentu
+        */
+
+        function* createNames(){
+            yield "Muhammad";
+            yield "Rizal";
+            yield "Pratama";
+        }
+
+        const names = createNames();
+        for (const name of names) {
+            console.info(name);
+        }
+
+        // Contoh studi kasus yg lebih kompleks -> return value bilangan ganjil
+        // Lazy -> batch demi batch di load data nya
+        function* bilGanjil(value){
+            for(let i = 1; i <= value; i++){
+                if(i % 2 === 1){
+                    console.info(`Yield ${i}`);
+                    yield i;
+                }
+            }
+        }
+
+        // Eager -> data di load secara keseluruhan secara langsung
+        function bilGanjilArray(value){
+            let result = []
+            for(let i = 1; i <= 100; i++ ){
+                if(i % 2 === 1){
+                    console.info(`Yield ${i}`);
+                    result.push(i);
+                }
+            }
+            return result;
+        }
+
+        const numbers = bilGanjil(100);
+        // for (const number of numbers) {
+        //     console.info(number);
+        // }
+        // Cara mengakses data generator
+        console.info(numbers.next().value);
+        console.info(numbers.next().value);
+        console.info(numbers.next().value);
+    </script>
+</body>
+</html>

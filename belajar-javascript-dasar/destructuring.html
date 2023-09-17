@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        {
+            // Destructuring Array -> mengakses sebuah data di dalam sebuah array dengan cara yang lebih sederhana dibandingkan kita
+            // mengakses value di dalam array satu per satu
+
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            // Cara kerja destructuring array -> Memperhatikan urutan value dari sebuah indeks array yang akan dilakukan destructuring
+            const [minggu, senin, selasa, rabu, kamis, ...others] = days;
+
+            console.info(minggu);
+            console.info(senin);
+            console.info(selasa);
+            console.info(rabu);
+            console.info(kamis);
+            console.info(others);
+        }
+
+        {
+            // Destructuring Object
+            const person = {
+                firstName: "Muhammad",
+                middleName: "Rizal", 
+                lastName: "Pratama",
+                address:{
+                    street: "Jalan Tarupolo Raya",
+                    city: "Semarang",
+                    country: "Indonesia"
+                },
+                hobby: "Rebahan",
+                channel: "Rizal Pratama"
+            };
+            // Destructuring Object -> Tidak perlu menaruh urutan dalam membuat destructuring object
+            const {firstName, middleName, lastName, address:{street, city, country}, ...others} = person;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(street);
+            console.info(city);
+            console.info(country);
+            console.info(others);
+        }
+
+        {
+            // Destructuring dalam Parameter
+            function displayPerson({firstName, middleName, lastName}){
+                console.info(firstName);
+                console.info(middleName);
+                console.info(lastName);
+            };
+
+            const person = {
+                firstName: "Muhammad",
+                middleName: "Rizal",
+                lastName: "Pratama"
+            };
+
+            displayPerson(person);
+        }
+
+        {
+            // Destructuring array parameter
+            function sum([first, second]){
+                return first + second;
+            }
+
+            console.info(sum([1,1]));
+            console.info(sum([10,10]));
+        }
+
+        {
+            // Default Value di sebuah Destructuring Array
+            const names = ["Muhammad", "Budi", "Haryanto"];
+            const [firstName, middleName = "Rizal", lastName = "Pratama"] = names;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Default Value di Sebuah Destructuring Object
+            const person = {
+                firstName: "Muhammad",
+                middleName: "Budi",
+                lastName: "Pratama"
+            };
+
+            const {firstName, middleName = "Rizal", lastName} = person;
+
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        {
+            // Membuat variable baru untuk mengganti nama properti yang terdapat di dalam suatu object
+            const person = {
+                firstName: "Muhammad",
+                middleName: "Budi",
+                lastName: "Pratama"
+            };
+
+            const {
+                firstName: namaDepan,
+                middleName: namaTengah = "Rizal",
+                lastName: namaBelakang
+            } = person;
+
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }
+    </script>
+</body>
+</html>

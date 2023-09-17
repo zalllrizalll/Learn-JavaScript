@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <script>
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`;
+            return say;
+        }
+        const result = sayHello("Rizal", "Pratama");
+        document.writeln(`<p>${result}</p>`);
+
+        function isContains(array, searchValue){
+            for (const element of array) {
+                if(element === searchValue){
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        const array = [5, 63, 73, 48, 92, 14, 54];
+        const searchArray = 14;
+        const foundArray = isContains(array, searchArray);
+        document.writeln(`<p>${foundArray}</p>`);
+    </script>
+</body>
+</html>

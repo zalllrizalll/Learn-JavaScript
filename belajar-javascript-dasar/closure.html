@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <script>
+        function createAdder(value){
+            const owner = "Rizal Pratama";
+
+            function add(param){
+                console.info(owner);
+                return value + param;
+            }
+
+            return add;
+        }
+
+        const addFive = createAdder(5);
+        /*
+        Variable addFive -> menampung nested function milik dari createAdder
+        Jadi, ketika kita memanggil variable addFive. Sama halnya ketika kita memanggil nested function
+        milik dari createAdder.
+        */ 
+
+        console.info(addFive(10));
+        console.info(addFive(20));
+
+        const addTen = createAdder(10);
+        
+        console.info(addTen(10));
+        console.info(addTen(20));
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Bersarang (Nested)</title>
+</head>
+<body>
+    <script>
+        function outer(){
+            function inner(){
+                console.info("Inner");
+            }
+            // nested function hanya bisa diakses di dalam function induk
+            // tdk dapat dieksekusi di luar function induk
+            inner();
+            inner();
+        }
+
+        outer();
+        // inner(); -> error terjadi dikarenakan nested function tdk dapat diakses di luar function induk
+    </script>
+</body>
+</html>
