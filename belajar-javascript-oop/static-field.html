@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Field</title>
+</head>
+<body>
+    <script>
+
+        /*
+        Sifat dari static property : Global Scope
+        Dia dapat diakses dimanapun, dan dapat dimanipulasi dalam 1 file tersebut
+        Cara pemanggilan value property tersebut :
+        Configuration.name -> sebutkan namaClass.property
+        */
+        class Configuration {
+            static name = "Belajar JavaScript OOP";
+            static version = 1.0;
+            static author = "Rizal Pratama";
+        }
+
+        Configuration.author = "Budi Nugraha";
+
+        console.info(Configuration.name);
+        console.info(Configuration.version);
+        console.info(Configuration.author);
+    </script>
+</body>
+</html>

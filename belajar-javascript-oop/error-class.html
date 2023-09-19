@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Class</title>
+</head>
+<body>
+    <script>
+
+        class ValidationError extends Error{
+            constructor(message, field){
+                super(message); // message error yang diterima akan diteruskan ke superclass Error
+                this.field = field;
+            }
+        }
+        class MathUtil{
+
+            static sum(...numbers){
+
+                if(numbers.length === 0){
+                    throw new ValidationError("Total parameter harus lebih dari 0", "numbers");
+                }
+                let total = 0;
+                for (const number of numbers) {
+                    total += number;
+                }
+                return total;
+            }
+        }
+        try{
+            console.info(MathUtil.sum());
+            console.info("Rizal");
+            /*
+            Jika terjadi error pada execute method MathUtil.sum(), maka kode program yg ada di bawahnya tidak akan dieksekusi
+            melainkan akan diteruskan ke block catch, Block catch akan dijalankan apabila dalam execute kode di dlm block try terjadi suatu error.
+            */
+        } catch(error){
+            if(error instanceof ValidationError){
+                console.info(`Terjadi error di field ${error.field} dengan error ${error.message}`);
+            } else {
+                console.info(`Terjadi error : ${error.message}`);
+            }
+        } finally {
+            /*
+            Kode block finally ini akan selalu dieksekusi setelah eksekusi kode block try dan juga catch.
+            Sukses ataupun error yang terjadi dalam execute kode program. Kode block finally ini akan tetap dieksekusi
+            */
+            console.info("Program Selesai!");
+        }
+        console.info("Pratama");
+    </script>
+</body>
+</html>

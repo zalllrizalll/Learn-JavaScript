@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Property</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name){
+                // Di dalam javascript pembuatan properti langsung di dalam sebuah constructor
+                this.name = name;
+            }
+        }
+
+        const Rizal = new Person("Rizal");
+        console.info(Rizal);
+        console.info(Rizal.name);
+    </script>
+</body>
+</html>

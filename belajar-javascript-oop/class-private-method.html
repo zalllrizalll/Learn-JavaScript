@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class : Private Method</title>
+</head>
+<body>
+    <script>
+        class Person{
+            say(name){
+                if(name){
+                    return this.#sayWithName(name);
+                } else {
+                    return this.#sayWithoutName();
+                }
+            }
+            // Ini merupakan cara deklarasi private method -> ditandai dengan syntax #
+            #sayWithoutName(){
+                console.info(`Hello`);
+            }
+
+            #sayWithName(name){
+                console.info(`Hello ${name}`);
+            }
+        }
+
+        const Rizal = new Person();
+        Rizal.say("Rizal");
+    </script>
+</body>
+</html>

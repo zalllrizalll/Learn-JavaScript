@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator InstanceOf</title>
+</head>
+<body>
+    <script>
+        class Employee{
+
+        }
+
+        class Manager extends Employee{
+
+        }
+
+        const Rizal = new Employee();
+        const Budi = new Manager();
+
+        /*
+        Operator typeof -> digunakan untuk melakukan suatu pengecekan value dari variable
+        output dari operator tersebut : berupa tipe data yang digunakan
+        */
+        console.info(typeof Rizal);
+        console.info(typeof Budi);
+        /*
+        Jika kita ingin melakukan pengecekan suatu object tersebut termasuk ke dalam
+        suatu instance class tertentu maka dapat menggunakan : operator instanceof. 
+        Contoh :
+        console.info(Budi instanceof Manager);
+        Output dari operator tersebut yaitu boolean
+        */
+
+        console.info(Rizal instanceof Employee); // True
+        console.info(Rizal instanceof Manager); // False
+        console.info(Budi instanceof Employee); // True
+        console.info(Budi instanceof Manager); // True
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Parent
+        class Employee{
+
+            constructor(firstName){
+                this.firstName = firstName;
+            }
+
+            sayHello(name){
+                console.info(`Hello ${name}, my name is employee ${this.firstName}`);
+            }
+        }
+        // Child -> Mewarisi seluruh properti dan juga method milik dari parent
+        class Manager extends Employee {
+            /*
+            Ketika kita ingin membuat sebuah constructor dari sebuah child, Wajib memanggil super constructor milik parent
+            Contoh :
+            super(firstName); -> sesuaikan nilai parameter dengan constructor milik parent
+            */
+
+            constructor(firstName, lastName){
+                super(firstName);
+                this.lastName = lastName;
+            }
+
+            sayHello(name){
+                console.info(`Hello ${name}, my name is manager ${this.firstName} ${this.lastName}`);
+            }
+        }
+
+        const Rizal = new Employee("Rizal");
+        Rizal.sayHello("Joko");
+
+        const Budi = new Manager("Budi", "Nugraha");
+        Budi.sayHello("Farah");
+    </script>
+</body>
+</html>
